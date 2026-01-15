@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mr.AutoShorts Studio</title>
+<style>
+body{background:#0f0f0f;color:#fff;font-family:Arial;padding:20px}
+input,button{width:100%;padding:12px;margin-top:10px;border-radius:8px;border:none}
+button{background:#ff0050;color:#fff}
+.card{background:#1c1c1c;padding:10px;margin-top:10px;border-radius:10px}
+</style>
+</head>
+<body>
+
+<h2>Mr.AutoShorts Studio</h2>
+<input placeholder="Paste YouTube Link here">
+<button onclick="analyze()">Analyze Video</button>
+<div id="clips"></div>
+<button onclick="generate()">Generate Shorts</button>
+
+<script>
+function analyze(){
+let clips=document.getElementById("clips");
+clips.innerHTML="";
+for(let i=1;i<=5;i++){
+clips.innerHTML+=`<div class='card'>
+<input type='checkbox'> Viral Moment ${i}<br>
+<small>00:${i*10} – This moment is insane 🔥</small>
+</div>`;
+}}
+function generate(){
+alert("Shorts generated successfully 🔥");
+}
+</script>
+
+</body>
+</html>
